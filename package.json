@@ -1,0 +1,20 @@
+{
+  "name": "containerization",
+  "version": "0.0.0",
+  "description": "Front-end code containization through iframes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "containerization",
+    "iframe",
+    "sandbox"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "dependencies": {
+    "alcatraz": "0.0.0",
+    "frames": "0.0.0"
+  }
+}
