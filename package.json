@@ -4,7 +4,8 @@
   "description": "Front-end code containization through iframes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "zuul -- test/containerization.test.js",
+    "local": "zuul --local 1337 -- test/containerization.test.js"
   },
   "keywords": [
     "containerization",
@@ -14,7 +15,31 @@
   "author": "Arnout Kazemier",
   "license": "MIT",
   "dependencies": {
-    "alcatraz": "0.0.0",
-    "frames": "0.0.0"
+    "alcatraz": "0.0.x",
+    "frames": "0.0.x"
+  },
+  "devDependencies": {
+    "pre-commit": "0.0.x",
+    "mocha": "1.14.x",
+    "zuul": "1.0.x",
+    "browserify": "3.0.x",
+    "mocha-phantomjs": "3.2.x"
+  },
+  "testling": {
+    "browsers": [
+      "ie/6..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ],
+    "harness": "mocha",
+    "files": "test.js"
   }
 }

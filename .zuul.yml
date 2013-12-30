@@ -1,0 +1,7 @@
+name: containerization
+ui: mocha-bdd
+browsers:
+  - name: chrome
+    version: latest
+  - name: firefox
+    version: latest
