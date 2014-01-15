@@ -41,5 +41,12 @@
     ],
     "harness": "mocha",
     "files": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigpipe/containerization"
+  },
+  "bugs": {
+    "url": "https://github.com/bigpipe/containerization/issues"
   }
 }
