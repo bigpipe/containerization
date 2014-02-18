@@ -321,7 +321,20 @@ Container.prototype.start = function start() {
     // event. Certain scripts might require in order to execute properly.
     //
     doc.open();
-    doc.write('<!doctype html>'); // Smallest, valid HTML5 document possible.
+
+    doc.write([
+      '<!doctype html>',
+      '<html><head>',
+      //
+      // iFrames can generate pointless requests by searching for a favicon.
+      // This can add up to three extra requests for a simple iframe. To battle
+      // this, we need to supply an empty icon.
+      //
+      // @see http://stackoverflow.com/questions/1321878/how-to-prevent-favicon-ico-requests
+      //
+      '<link rel="icon" href="data:;base64,=">',
+      '</head><body>'
+    ].join('\n'));
 
     //
     // Introduce our messaging variable, this needs to be done before we eval
